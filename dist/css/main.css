@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: white;
+  line-height: 1.6;
+  font-family: "Dosis", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #333; }

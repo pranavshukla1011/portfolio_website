@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: white;
+  line-height: 1.6;
+  font-family: "Dosis", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer; }
+
+img {
+  width: 100%; }
+
+#logo {
+  color: white;
+  text-transform: uppercase;
+  width: 70px;
+  height: 70px; }
+
+.header-main {
+  height: 100vh;
+  color: white;
+  position: relative;
+  background-color: black; }
+  .header-main::before {
+    content: "";
+    position: absolute;
+    background: url("../img/showcase-nature.jpg") no-repeat center/cover;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1; }
+
+.header-main > * {
+  z-index: 100; }
