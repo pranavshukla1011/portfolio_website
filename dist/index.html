@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/bb534c52d8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Pranav Shukla | Front-End Developer</title>
 </head>
 <body>
-    <header class="header-main">
+    <video class="videoBg" autoplay muted loop src="img/showcase -video-1.mp4"></video>
+    <header class="header-home">
+        
         <div class="container">
+            
             <div class="main-nav">
+
                 <img id = "logo" src="img/logo_white_nobg.png" alt="Portfolio Image">
                 <ul>
                     <li><a href="index.html" class = "current">Home</a></li>
@@ -22,16 +26,50 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class = "header-text">
-                <h1>I am Pranav Shukla. I love <span class = "txt-type" data-wait = "3000" data-words = '["Web Development", "Problem Solving", "Professional Writing", "learning New Technologies", "Networking", "Team Management", "playing music", "travelling", "watching youtube...hehe!"]'></span></h1>
+            
+           
+            <div class = "header-content">
+                <h1>Hey there! I'm Pranav. 
+                    <br>
+                    I love 
+                    <span class = "txt-type" data-wait = "1000" data-words = '["web development.", "problem solving.", "professional writing.", "learning new technologies.", "networking.", "team management.", "playing music.", "travelling.", "watching youtube...and Naruto...hehe!"]'>
+                    </span>
+                </h1>
                 <p class = "bigger">
-                    I'm a 3rd Year, Undergrad at National Institute of Technology, Jalandhar 
-                    Currently learning front-end web development, I intend to become a full-stack developer (MERN stack) equipped with latest technologies like Typescript, Gatsby , GraphQL etc. I love learing and implementing new technologies.
+                    I am in my 3rd year of undergraduate
+                    school at National Institute of Technology, Jalandhar .
+                    <br>
+                    I am currently studying front-end web development and I aspire to become a <br> full-stack (MERN stack) developer equipped with the latest technologies such as Typescript, Gatsby, GraphQL, etc.
                 </p>
 
-                <a href="project.html"> Checkout My Work </a>
-            </div> 
-         </div>
+                <a class="btn-dark" href="project.html"> Checkout My Work </a>
+            </div>
+        </div>
     </header>
+
+    <footer>
+        <div class="container">       
+            <div class="social-media">
+                <div>
+                    <a href=""><i class="fab fa-facebook fa-3x"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-twitter fa-3x"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-instagram fa-3x"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-youtube fa-3x"></i></a>
+                </div>
+            </div>
+            <div>
+                Copyright <i class="far fa-copyright"></i> 2021, Pranav Shukla
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/typewriter.js"></script>
 </body>
 </html>

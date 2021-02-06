@@ -1,8 +1,5 @@
-$website-width: 1280px;
-$main-color: #ffbc00;
-$light-color: white;
-$dark-color: #333;
-$bg-img: url("../img/showcase-nature.jpg");
+@import "variables";
+@import "utilities";
 
 * {
   margin: 0;
@@ -17,14 +14,17 @@ body {
 
 a {
   text-decoration: none;
-  color: $light-color;
+  color: $dark-color;
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
   width: 100%;
 }
-
 #logo {
   color: white;
   text-transform: uppercase;
@@ -32,27 +32,107 @@ img {
   height: 70px;
 }
 
-.header {
-  &-main {
-    height: 100vh;
-    color: white;
-    position: relative;
-    background-color: black;
+.videoBg {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      background: $bg-img no-repeat center/cover;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 100%;
-      opacity: 0.5;
-      z-index: 1;
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    li {
+      padding-left: 5%;
+      a {
+        font-size: 1.3rem;
+      }
     }
   }
 
-  &-main > * {
-    z-index: 100;
+  a {
+    color: $light-color;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+.header {
+  &-home {
+    height: 100vh;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+    overflow: hidden;
+
+    .header-content {
+      text-align: center;
+      margin-top: 15%;
+      padding: 2.5% 15px;
+      position: relative;
+      border-radius: 50%;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      p {
+        color: $light-color;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-color: #333;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .social-media {
+    display: flex;
+    align-items: center;
+
+    div {
+      padding: 10px;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $main-color;
+        transition: all 0.5s;
+      }
+    }
   }
 }

@@ -1,0 +1,45 @@
+@import "variables";
+.container {
+  max-width: $website-width;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-top: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $dark-color;
+    background-color: $main-color;
+  }
+
+  &-light {
+    @extend %btn-shared;
+    color: $dark-color;
+    background-color: $light-color;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+
+.bigger {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+}

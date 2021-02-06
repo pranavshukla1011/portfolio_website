@@ -1,3 +1,36 @@
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 1.5rem; }
+
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-top: 5px;
+  transition: all 0.5s;
+  cursor: pointer; }
+
+.btn-main {
+  color: #333;
+  background-color: #ffbc00; }
+
+.btn-light {
+  color: #333;
+  background-color: white; }
+
+.btn-dark {
+  color: white;
+  background-color: #333; }
+
+.bigger {
+  font-size: 1.6rem;
+  margin-bottom: 2rem; }
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #ffbc00; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -9,8 +42,11 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #333;
   cursor: pointer; }
+
+ul {
+  list-style: none; }
 
 img {
   width: 100%; }
@@ -21,21 +57,77 @@ img {
   width: 70px;
   height: 70px; }
 
-.header-main {
+.videoBg {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .main-nav ul li {
+      padding-left: 5%; }
+      .main-nav ul li a {
+        font-size: 1.3rem; }
+  .main-nav a {
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    transition: border-color 0.5s; }
+    .main-nav a:hover {
+      border-color: grey; }
+    .main-nav a.current {
+      border-color: #ffbc00; }
+
+.header-home {
   height: 100vh;
   color: white;
   position: relative;
-  background-color: black; }
-  .header-main::before {
-    content: "";
-    position: absolute;
-    background: url("../img/showcase-nature.jpg") no-repeat center/cover;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    opacity: 0.5;
-    z-index: 1; }
+  overflow: hidden;
+  opacity: 0.9;
+  overflow: hidden; }
+  .header-home .header-content {
+    text-align: center;
+    margin-top: 15%;
+    padding: 2.5% 15px;
+    position: relative;
+    border-radius: 50%; }
+    .header-home .header-content h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      font-weight: 700; }
+    .header-home .header-content p {
+      color: white; }
+    .header-home .header-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: #333;
+      opacity: 0.5; }
 
-.header-main > * {
-  z-index: 100; }
+footer {
+  text-align: center;
+  background-color: black;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer .social-media {
+    display: flex;
+    align-items: center; }
+    footer .social-media div {
+      padding: 10px; }
+    footer .social-media a {
+      color: white; }
+      footer .social-media a:hover {
+        color: #ffbc00;
+        transition: all 0.5s; }
