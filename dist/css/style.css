@@ -95,8 +95,7 @@ img {
     text-align: center;
     margin-top: 15%;
     padding: 2.5% 15px;
-    position: relative;
-    border-radius: 50%; }
+    position: relative; }
     .header-home .header-content h1 {
       font-size: 4rem;
       line-height: 1.2;
