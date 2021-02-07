@@ -38,8 +38,36 @@
   margin-bottom: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: $main-color;
+}
+
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: set-text-color($main-color);
+  }
+
+  &-light {
+    background-color: $light-color;
+    color: set-text-color($light-color);
+  }
+
+  &-dark {
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+  }
+}
+
+%social-shared {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: $trans-props;
 }

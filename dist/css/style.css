@@ -16,20 +16,35 @@
 
 .btn-light {
   color: #333;
-  background-color: white; }
+  background-color: #f4f4f4; }
 
 .btn-dark {
-  color: white;
+  color: #f4f4f4;
   background-color: #333; }
 
 .bigger {
   font-size: 1.6rem;
   margin-bottom: 2rem; }
 
+.text-center {
+  text-align: center; }
+
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: #ffbc00; }
+
+.bg-main {
+  background-color: #ffbc00;
+  color: #fff; }
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #000; }
+
+.bg-dark {
+  background-color: #333;
+  color: #fff; }
 
 * {
   margin: 0;
@@ -76,7 +91,7 @@ img {
       .main-nav ul li a {
         font-size: 1.3rem; }
   .main-nav a {
-    color: white;
+    color: #f4f4f4;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     transition: border-color 0.5s; }
@@ -101,32 +116,174 @@ img {
       line-height: 1.2;
       font-weight: 700; }
     .header-home .header-content p {
-      color: white; }
-    .header-home .header-content::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      background-color: #333;
-      opacity: 0.5; }
+      color: #f4f4f4; }
 
-footer {
-  text-align: center;
-  background-color: black;
-  opacity: 0.6;
+.header-inner {
+  border-bottom: 3px solid #ffbc00; }
+
+.line {
+  height: 3px;
+  width: 5rem;
+  background-color: #ffbc00;
+  margin: 0 auto 2rem auto; }
+
+.about_me {
+  background-color: white;
+  color: #000;
+  padding-bottom: 3rem; }
+  .about_me .about-content {
+    display: grid;
+    grid-template-areas: "bio-img bio bio";
+    grid-gap: 1.2rem; }
+    .about_me .about-content .bio-img {
+      grid-area: bio-img; }
+    .about_me .about-content .bio {
+      grid-area: bio;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-left: 3px solid #ffbc00; }
+
+.skills {
+  padding: 1rem 0rem 5rem 0rem; }
+  .skills .bar {
+    overflow: hidden;
+    height: 20px;
+    background: grey;
+    border-radius: 5px;
+    margin-bottom: 0.3rem; }
+    .skills .bar div {
+      height: 100%;
+      width: 0%;
+      color: white;
+      text-align: center;
+      background-color: #ffbc00; }
+  .skills .tags {
+    display: flex;
+    justify-content: space-evenly; }
+  .skills .html,
+  .skills .sass {
+    animation: animate1 3s forwards; }
+  .skills .tlcss {
+    animation: animate2 3s forwards; }
+  .skills .js {
+    animation: animate3 3s forwards; }
+
+@keyframes animate1 {
+  to {
+    width: 100%; } }
+
+@keyframes animate2 {
+  to {
+    width: 60%; } }
+
+@keyframes animate3 {
+  to {
+    width: 80%; } }
+
+.card {
+  display: grid;
+  grid-template-areas: "school school school" "duration duration duration" "stream stream stream";
+  margin: 0 auto 2rem auto;
+  padding: 2rem 0;
+  opacity: 0.5; }
+  .card .school {
+    grid-area: school; }
+  .card .duration {
+    grid-area: duration;
+    display: flex;
+    justify-content: space-around; }
+  .card .stream {
+    grid-area: stream;
+    display: flex;
+    justify-content: space-around; }
+
+.social-media {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  footer .social-media {
-    display: flex;
-    align-items: center; }
-    footer .social-media div {
-      padding: 10px; }
-    footer .social-media a {
-      color: white; }
-      footer .social-media a:hover {
-        color: #ffbc00;
-        transition: all 0.5s; }
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.social-icons {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap; }
+
+.socialicon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  text-decoration: none;
+  transition: all 0.5s ease; }
+
+.socialicon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  margin: 8px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: all 0.5s ease; }
+
+.socialicon i {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: all 0.5s ease; }
+
+.socialicon.twitter {
+  color: #1da1f2; }
+
+.socialicon.github {
+  color: #24292e; }
+
+.socialicon.linkedin {
+  color: #0e76a8; }
+
+.socialicon.medium {
+  color: #00ab6c; }
+
+.socialicon:after {
+  content: "";
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  transform: translate(0, 64px);
+  border-radius: 50%;
+  transition: all 0.5s ease; }
+
+.socialicon.twitter:after {
+  background-color: #1da1f2; }
+
+.socialicon.github:after {
+  background-color: #1f2122; }
+
+.socialicon.linkedin:after {
+  background-color: #0e76a8; }
+
+.socialicon.instagram:after {
+  background-color: #ea4c89; }
+
+.socialicon.medium:after {
+  background-color: #00ab6c; }
+
+.socialicon:hover {
+  transform: translateY(-4px); }
+
+.socialicon:hover:after {
+  transform: scale(1.2); }
+
+.socialicon:hover i {
+  color: #fff; }

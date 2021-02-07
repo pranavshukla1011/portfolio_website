@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/bb534c52d8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Pranav Shukla | Front-End Developer</title>
@@ -12,13 +13,13 @@
 <body >
     
     <video src="img/video.m4v" class = "videoBg" autoplay muted loop></video>
-    <header class="header-home">
+    <div class="header-home">
         
         <div class="container">
             
             <div class="main-nav">
 
-                <img id = "logo" src="img/logo_white_nobg.png" alt="Portfolio Image">
+                <img id = "logo" src="img/logo_white_nobg.png" alt="Portfolio Image"></img>
                 <ul>
                     <li><a href="index.html" class = "current">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -29,7 +30,7 @@
             </div>
             
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class = "header-content">
                 <h1>Hey there! I'm Pranav. 
                     <br>
@@ -42,35 +43,66 @@
                     <br>
                     I am currently studying front-end web development and I aspire to become a <br> full-stack (MERN stack) developer equipped with the latest technologies such as Typescript, Gatsby, GraphQL, etc.
                 </p>
+            </div>
+        </div>
+        
+        
+        <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div>
+                <div class="social-icons">
 
-                <a class="btn-dark" href="project.html"> Checkout My Work </a>
+                    <a class="socialicon twitter" href="" target="_blank" rel="author">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a class="socialicon linkedin" href="" target="_blank" rel="author">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a class="socialicon medium" href="" target="_blank" rel="author">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+
+                    <a class="socialicon github" href="" target="_blank" rel="author">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
             </div>
         </div>
     </header>
 
-    <footer>
+    <!-- <footer>
         <div class="container">       
-            <div class="social-media">
-                <div>
-                    <a href=""><i class="fab fa-facebook fa-3x"></i></a>
+            <div class="social-icons">
+
+                    <a class="socialicon twitter" href="" target="_blank" rel="author">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a class="socialicon linkedin" href="" target="_blank" rel="author">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a class="socialicon medium" href="" target="_blank" rel="author">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+
+                    <a class="socialicon github" href="" target="_blank" rel="author">
+                        <i class="fab fa-github"></i>
+                    </a>
+
                 </div>
-                <div>
-                    <a href=""><i class="fab fa-twitter fa-3x"></i></a>
-                </div>
-                <div>
-                    <a href=""><i class="fab fa-instagram fa-3x"></i></a>
-                </div>
-                <div>
-                    <a href=""><i class="fab fa-youtube fa-3x"></i></a>
-                </div>
-            </div>
             <div>
                 Copyright <i class="far fa-copyright"></i> 2021, Pranav Shukla
             </div>
         </div>
-
-    </footer>
+    </footer> -->
 
     <script src="js/typewriter.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
