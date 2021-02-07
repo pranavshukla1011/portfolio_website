@@ -75,7 +75,7 @@ img {
 
 .header {
   &-home {
-    height: 100vh;
+    max-height: 100vh;
     color: $dark-color;
     position: relative;
     opacity: 0.9;
