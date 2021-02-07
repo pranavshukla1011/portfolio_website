@@ -301,9 +301,12 @@ footer {
     justify-content: space-around; }
 
 .work,
-.blog,
-.contact {
+.blog {
   min-height: 100vh;
+  color: #333; }
+
+.contact {
+  margin: 15% 0;
   color: #333; }
 
 .form-input {

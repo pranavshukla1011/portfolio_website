@@ -245,13 +245,16 @@ footer {
 
 //projects
 .work,
-.blog,
-.contact {
+.blog {
   min-height: 100vh;
   color: $dark-color;
 }
 
 //contact
+.contact {
+  margin: 15% 0;
+  color: $dark-color;
+}
 .form-input {
   display: grid;
   grid-template-areas:
