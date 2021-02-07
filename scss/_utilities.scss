@@ -71,3 +71,7 @@ input[class^="btn-"]:hover {
   z-index: 1;
   transition: $trans-props;
 }
+
+.background {
+  background-color: rgba(231, 231, 231, 0.3);
+}

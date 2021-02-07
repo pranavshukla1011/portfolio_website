@@ -299,13 +299,40 @@ footer {
     display: flex;
     justify-content: space-around; }
 
-.work {
+.work,
+.blog,
+.contact {
   min-height: 100vh;
   color: #333; }
 
-.blog {
-  color: #333;
-  min-height: 100vh; }
+.form-input {
+  display: grid;
+  grid-template-areas: "name name phone phone" "subject subject email email" "message message message message";
+  grid-gap: 1rem; }
+  .form-input .name {
+    grid-area: name; }
+  .form-input .subject {
+    grid-area: subject; }
+  .form-input .email {
+    grid-area: email; }
+  .form-input .phone {
+    grid-area: phone; }
+  .form-input .message {
+    grid-area: message; }
+  .form-input .text {
+    height: 2rem;
+    padding: 0rem 1rem; }
+  .form-input .message {
+    height: 5rem;
+    padding: 1rem; }
+
+.submit {
+  transition: all 0.5s ease;
+  border: none;
+  width: 50%;
+  margin-top: 3rem; }
+  .submit:hover {
+    background-color: #ffbc00; }
 
 .social-media {
   display: flex;
@@ -361,6 +388,9 @@ footer {
 
 .socialicon.medium {
   color: #00ab6c; }
+
+.socialicon.instagram {
+  color: #c95eae; }
 
 .socialicon:after {
   content: "";

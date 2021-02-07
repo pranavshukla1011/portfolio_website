@@ -1,5 +1,6 @@
 @import "variables";
 @import "utilities";
+@import "img-grid";
 
 * {
   margin: 0;
@@ -14,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $dark-color;
+  color: $light-color;
   cursor: pointer;
 }
 
@@ -37,7 +38,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  height: 130vh;
+  height: 120vh;
 }
 
 .main-nav {
@@ -56,7 +57,7 @@ img {
   }
 
   a {
-    color: $light-color;
+    color: $dark-color;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     transition: border-color 0.5s;
@@ -74,14 +75,14 @@ img {
 .header {
   &-home {
     height: 100vh;
-    color: white;
+    color: $dark-color;
     position: relative;
     opacity: 0.9;
     overflow: hidden;
 
     .header-content {
       text-align: center;
-      margin-top: 15%;
+      margin-top: 10%;
       padding: 2.5% 15px;
       position: relative;
 
@@ -92,7 +93,7 @@ img {
       }
 
       p {
-        color: $light-color;
+        color: $dark-color;
       }
 
       // &::before {
@@ -115,6 +116,7 @@ img {
 }
 
 //about_page
+
 .line {
   height: 3px;
   width: 5rem;
@@ -123,17 +125,16 @@ img {
 }
 
 .about_me {
-  background-color: white;
   color: set-text-color($light-color);
   padding-bottom: 3rem;
+  min-height: 50vh;
 
   .about-content {
     display: grid;
     grid-template-areas: "bio-img bio bio";
     // "a1 a2 a3";
     grid-gap: 1.2rem;
-
-    .bio-img {
+    c .bio-img {
       grid-area: bio-img;
     }
 
@@ -151,6 +152,8 @@ img {
 
 .skills {
   padding: 1rem 0rem 5rem 0rem;
+  position: relative;
+  color: $dark-color;
   .bar {
     overflow: hidden;
     height: 20px;
@@ -203,7 +206,14 @@ img {
   }
 }
 
+footer {
+  border-top: 1px solid $main-color;
+  color: $dark-color;
+}
 //education
+.education {
+  color: $dark-color;
+}
 .card {
   display: grid;
   grid-template-areas:
@@ -229,6 +239,64 @@ img {
     grid-area: stream;
     display: flex;
     justify-content: space-around;
+  }
+}
+
+//projects
+.work,
+.blog,
+.contact {
+  min-height: 100vh;
+  color: $dark-color;
+}
+
+//contact
+.form-input {
+  display: grid;
+  grid-template-areas:
+    "name name phone phone"
+    "subject subject email email"
+    "message message message message";
+
+  grid-gap: 1rem;
+  .name {
+    grid-area: name;
+  }
+
+  .subject {
+    grid-area: subject;
+  }
+
+  .email {
+    grid-area: email;
+  }
+
+  .phone {
+    grid-area: phone;
+  }
+
+  .message {
+    grid-area: message;
+  }
+
+  .text {
+    height: 2rem;
+    padding: 0rem 1rem;
+  }
+
+  .message {
+    height: 5rem;
+    padding: 1rem;
+  }
+}
+
+.submit {
+  transition: all 0.5s ease;
+  border: none;
+  width: 50%;
+  margin-top: 3rem;
+  &:hover {
+    background-color: $main-color;
   }
 }
 
@@ -293,6 +361,10 @@ img {
 
 .socialicon.medium {
   color: $col-icon-medium;
+}
+
+.socialicon.instagram {
+  color: $col-icon-instagram;
 }
 
 .socialicon:after {
