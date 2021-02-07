@@ -195,8 +195,7 @@ img {
   max-height: 100vh;
   color: #333;
   position: relative;
-  opacity: 0.9;
-  overflow: hidden; }
+  opacity: 0.9; }
   .header-home .header-content {
     text-align: center;
     margin-top: 10%;
@@ -306,7 +305,9 @@ footer {
   color: #333; }
 
 .contact {
-  margin: 15% 0;
+  min-height: 90vh;
+  color: #333;
+  padding-top: 5%;
   color: #333; }
 
 .form-input {
