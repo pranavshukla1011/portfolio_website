@@ -174,7 +174,8 @@ input[class^="btn-"]:hover {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-left: 3px solid #ffbc00; }
+        border-left: 3px solid #ffbc00;
+        border-right: 3px solid #ffbc00; }
   .items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
