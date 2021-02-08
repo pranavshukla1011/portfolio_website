@@ -266,9 +266,13 @@ footer {
   grid-template-areas:
     "name name phone phone"
     "subject subject email email"
-    "message message message message";
+    "message message message message"
+    "captcha captcha captcha captcha";
 
   grid-gap: 1rem;
+  .captcha {
+    grid-area: captcha;
+  }
   .name {
     grid-area: name;
   }
