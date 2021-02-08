@@ -33,28 +33,20 @@
 }
 
 @media (max-width: 700px) {
-  //about
-  .about_me {
-    color: set-text-color($light-color);
-    padding-bottom: 3rem;
-    min-height: 50vh;
+  .about-content {
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 40vh;
+  }
+  .bio-img {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
 
-    .about-content {
-      grid-template-columns: repeat(1, 1fr);
-      .bio-img {
-        display: none;
-      }
-      .bio {
-        grid-area: bio;
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-left: 3px solid $main-color;
-        border-right: 3px solid $main-color;
-      }
-    }
+  .bio {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 3px solid $main-color;
   }
 
   //projects
@@ -64,5 +56,17 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 530px) {
+  form .form-input {
+    grid-template-areas:
+      "name"
+      "phone"
+      "subject"
+      "subject"
+      "email"
+      "message";
   }
 }

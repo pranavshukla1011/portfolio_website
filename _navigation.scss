@@ -1,0 +1,162 @@
+@media (max-width: 530px) {
+  header {
+    position: relative;
+    .main-nav {
+      ul {
+        display: none;
+      }
+    }
+
+    .navigation {
+      display: block;
+    }
+  }
+
+  .menu-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    & .toggle-btn {
+      z-index: 3;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    & .menuoverlay {
+      z-index: 2;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      padding: 1rem;
+      background: $primary_color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.4s ease-in-out;
+
+      & > div {
+        position: relative;
+        z-index: 2;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 2px;
+          background: inherit;
+        }
+
+        &:before {
+          top: -10px;
+        }
+
+        &:after {
+          top: 10px;
+        }
+      }
+    }
+
+    .toggle-btn:checked ~ .menuoverlay {
+      background-color: $main-color;
+    }
+
+    .toggle-btn:checked + .menuoverlay > div {
+      transform: rotate(135deg);
+      &:before,
+      &:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+
+    .toggle-btn:checked:hover + .menuoverlay > div {
+      transform: rotate(225deg);
+    }
+  }
+  .menu-wrap .menu-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      background-color: $overlay-color;
+      width: 200vw;
+      height: 200vh;
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: all 0.4s ease;
+      border-radius: 50%;
+
+      & > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+
+        & > ul > li {
+          list-style-type: none;
+          color: #fff;
+          font-size: 1.5rem;
+          padding: 1.5rem;
+          & a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.4s ease;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-wrap .toggle-btn:checked ~ .menu-content {
+    visibility: visible;
+
+    & > div {
+      transform: scale(1);
+      transition-duration: $menu-speed;
+
+      & > div {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+      }
+    }
+  }
+
+  .menu-wrap .toggle-btn:checked ~ header.social-icons {
+    visibility: none;
+  }
+}

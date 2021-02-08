@@ -2,7 +2,7 @@
 @import "utilities";
 @import "img-grid";
 @import "media_queries";
-
+@import "navigation";
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +41,10 @@ img {
   top: 0;
   left: 0;
   height: 120vh;
+}
+
+.navigation {
+  display: none;
 }
 
 .main-nav {
@@ -135,7 +139,7 @@ img {
     grid-template-areas: "bio-img bio bio";
     // "a1 a2 a3";
     grid-gap: 1.2rem;
-    c .bio-img {
+    .bio-img {
       grid-area: bio-img;
     }
 
@@ -301,8 +305,10 @@ footer {
   border: none;
   width: 50%;
   margin-top: 3rem;
+  transition: all 0.3s;
   &:hover {
     background-color: $main-color;
+    color: $dark-color;
   }
 }
 
@@ -414,4 +420,10 @@ footer {
 }
 .socialicon:hover i {
   color: #fff;
+}
+
+.social-media {
+  div p {
+    padding-top: 22px;
+  }
 }
