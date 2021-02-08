@@ -1,0 +1,33 @@
+//ipads and tablets
+@media (max-width: 900px) {
+  //about
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // "a1 a2 a3";
+    grid-gap: 1.2rem;
+    .bio-img {
+      grid-area: bio-img;
+      height: 100%;
+    }
+
+    .bio {
+      grid-area: bio;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-left: 3px solid $main-color;
+    }
+  }
+
+  //projects
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr) minmax(0, 10vh);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+}
