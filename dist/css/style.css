@@ -179,7 +179,7 @@ input[class^="btn-"]:hover {
 
 @media (max-width: 530px) {
   form .form-input {
-    grid-template-areas: "name" "phone" "subject" "subject" "email" "message" "captcha"; } }
+    grid-template-areas: "name" "phone" "subject" "subject" "email" "message"; } }
 
 @media (max-width: 530px) {
   header {
@@ -477,8 +477,6 @@ footer {
   display: grid;
   grid-template-areas: "name name phone phone" "subject subject email email" "message message message message";
   grid-gap: 1rem; }
-  .form-input .captcha {
-    grid-area: captcha; }
   .form-input .name {
     grid-area: name; }
   .form-input .subject {
