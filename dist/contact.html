@@ -59,8 +59,11 @@
                 <h2>Contact Me</h2>
                 <div class="line"></div>
                 <p class="bigger">Fill the form below to reach me...</p>
-                <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <form method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <div class = "form-input" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        
+                        <input name="bot-field" />
+                        
                         <input 
                         type="text" 
                         name="name" 
@@ -95,7 +98,6 @@
                         placeholder="Message">
                         </textarea>
 
-                        <div class = "captcha" data-netlify-recaptcha="true"></div>
                     </div>
                     
                     <button class = "submit btn-dark" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Submit</button>

@@ -475,7 +475,7 @@ footer {
 
 .form-input {
   display: grid;
-  grid-template-areas: "name name phone phone" "subject subject email email" "message message message message" "captcha captcha captcha captcha";
+  grid-template-areas: "name name phone phone" "subject subject email email" "message message message message";
   grid-gap: 1rem; }
   .form-input .captcha {
     grid-area: captcha; }
