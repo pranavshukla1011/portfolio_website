@@ -59,14 +59,43 @@
                 <h2>Contact Me</h2>
                 <div class="line"></div>
                 <p class="bigger">Fill the form below to reach me...</p>
-                <form>
+                <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <div class = "form-input" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <input type="text" class="text name" placeholder="Name">
-                        <input type="text" class="text subject" placeholder="Subject">
-                        <input type="email" class="text email" placeholder="Email">
-                        <input type="number" class="text phone" placeholder="Phone No.">
-                        <textarea class="text message" placeholder="Message"></textarea>
+                        <input 
+                        type="text" 
+                        name="name" 
+                        class="text name" 
+                        placeholder="Name"
+                        />
+
+                        <input 
+                        type="text" 
+                        name="subject" 
+                        class="text subject" 
+                        placeholder="Subject"
+                        />
+
+                        <input 
+                        type="email" 
+                        name="email" 
+                        class="text email" 
+                        placeholder="Email"
+                        />
+
+                        <input 
+                        type="number" 
+                        name="number" 
+                        class="text phone" 
+                        placeholder="Phone No."
+                        />
+
+                        <textarea 
+                        class="text message" 
+                        name="message" 
+                        placeholder="Message">
+                        </textarea>
                     </div>
+                    <div data-netlify-recaptcha="true"></div>
                     <button class = "submit btn-dark" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Submit</button>
                 </form>
             </div>
