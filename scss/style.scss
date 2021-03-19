@@ -188,6 +188,11 @@ img {
   .tlcss {
     animation: animate2 3s forwards;
   }
+
+  .mcss {
+    animation: animate4 3s forwards;
+  }
+
   .js {
     animation: animate3 3s forwards;
   }
@@ -205,9 +210,15 @@ img {
   }
 }
 
-@keyframes animate3 {
+@keyframes animate4 {
   to {
     width: 80%;
+  }
+}
+
+@keyframes animate3 {
+  to {
+    width: 90%;
   }
 }
 

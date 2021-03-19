@@ -6,7 +6,6 @@
   "dependencies": {
     "node-sass": "^5.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },

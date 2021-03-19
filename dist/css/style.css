@@ -423,6 +423,8 @@ img {
     animation: animate1 3s forwards; }
   .skills .tlcss {
     animation: animate2 3s forwards; }
+  .skills .mcss {
+    animation: animate4 3s forwards; }
   .skills .js {
     animation: animate3 3s forwards; }
 
@@ -434,9 +436,13 @@ img {
   to {
     width: 60%; } }
 
-@keyframes animate3 {
+@keyframes animate4 {
   to {
     width: 80%; } }
+
+@keyframes animate3 {
+  to {
+    width: 90%; } }
 
 footer {
   border-top: 1px solid #ffbc00;
