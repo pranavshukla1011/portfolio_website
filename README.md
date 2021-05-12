@@ -12,3 +12,5 @@ _Building a new faster and more beautiful porfolio using reactjs._
 -> open dist/ 
 
 -> open index.html
+
+**Visit new porfolio:** https://pranav-shukla.netlify.app/  to see all my projects.
